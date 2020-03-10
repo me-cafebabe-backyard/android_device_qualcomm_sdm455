@@ -57,6 +57,12 @@ PRODUCT_PACKAGES += \
     charger_led \
     charger_led_recovery
 
+# Filesystem
+PRODUCT_PACKAGES += \
+    e2fsck_ramdisk \
+    tune2fs_ramdisk \
+    resize2fs_ramdisk
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
