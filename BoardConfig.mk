@@ -28,7 +28,8 @@ TARGET_SCREEN_DENSITY := 383
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/xiaomi/wayne.config
+TARGET_KERNEL_CONFIG := vendor/sdm660-perf_defconfig vendor/sdm660-custom.config vendor/debugfs.config
+TARGET_KERNEL_SOURCE := kernel/qualcomm/sdm455
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
