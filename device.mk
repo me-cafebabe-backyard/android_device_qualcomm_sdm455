@@ -14,8 +14,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -52,9 +51,6 @@ PRODUCT_PACKAGES_DEBUG += \
 # Camera
 PRODUCT_PACKAGES += \
     libpiex_shim
-
-# Consumerir
-BOARD_HAVE_IR := true
 
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
