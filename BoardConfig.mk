@@ -7,13 +7,13 @@
 # Inherit from sdm660-common
 include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
-WAYNE_PATH := device/xiaomi/wayne-common
+DEVICE_PATH := device/qualcomm/sdm455
 
 # Display
 TARGET_SCREEN_DENSITY := 440
 
 # HIDL
-DEVICE_MANIFEST_FILE += $(WAYNE_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/xiaomi/wayne.config
@@ -23,7 +23,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 BOARD_VENDORIMAGE_PARTITION_SIZE := 2147483648
 
 # Properties
-TARGET_VENDOR_PROP += $(WAYNE_PATH)/vendor.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Inherit the proprietary files
-include vendor/xiaomi/wayne-common/BoardConfigVendor.mk
+include vendor/qualcomm/sdm455/BoardConfigVendor.mk
