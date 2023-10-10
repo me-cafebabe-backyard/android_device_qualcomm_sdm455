@@ -9,6 +9,18 @@ include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/qualcomm/sdm455
 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vendor
+
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
+
 # Display
 TARGET_SCREEN_DENSITY := 440
 
@@ -24,6 +36,12 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 2147483648
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2021-07-01
 
 # Inherit the proprietary files
 include vendor/qualcomm/sdm455/BoardConfigVendor.mk
