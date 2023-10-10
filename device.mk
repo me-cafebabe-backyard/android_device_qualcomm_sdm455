@@ -52,9 +52,6 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
-# Haters gonna hate..
-PRODUCT_CHARACTERISTICS := nosdcard
-
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
