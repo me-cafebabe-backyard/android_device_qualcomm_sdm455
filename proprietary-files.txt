@@ -1,36 +1,32 @@
-# Graphics firmware - from jasmine
-vendor/firmware/a512_zap.b00
-vendor/firmware/a512_zap.b01
-vendor/firmware/a512_zap.b02
-vendor/firmware/a512_zap.elf
-vendor/firmware/a512_zap.mdt
+# Graphics firmware - from S62Pro
+vendor/firmware/a508_zap.b00
+vendor/firmware/a508_zap.b01
+vendor/firmware/a508_zap.b02
+vendor/firmware/a508_zap.elf
+vendor/firmware/a508_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
-vendor/firmware/a540_gpmu.fw2
 
-# Gatekeeper - from jasmine
+# Gatekeeper - from S62Pro
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
-# Keymaster - from jasmine
-vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
-vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
+# Keymaster - from S62Pro
+vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqcbor.so
+vendor/lib64/libqtikeymaster4.so
 
-# Sensors - from jasmine
+# Sensors - from S62Pro
 vendor/bin/sensors.qti
 vendor/etc/sensors/hals.conf
-vendor/lib/libsensor_reg.so
 vendor/lib/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/libsensor1.so
+vendor/lib64/sensors.ssc.so
 
-# Sensors - from PL2_sprout-user 10 QKQ1.190828.002 00WW_4_150
-vendor/lib/sensors.ssc.so|bee13b2ad7f1ef0d2cf63708fa38ad76877ea287
-vendor/lib64/sensors.ssc.so|42577aa881baa287ec037c0e59972ad0e0358b08
-
-# Wifi - from jasmine
+# Wifi - from S62Pro
 vendor/bin/cnss-daemon
