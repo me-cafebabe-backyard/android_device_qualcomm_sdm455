@@ -16,8 +16,10 @@ AB_OTA_PARTITIONS += \
     boot
 
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+ifneq ($(BUILD_RECOVERY_IMAGE),true)
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
+endif
 
 # Display
 TARGET_SCREEN_DENSITY := 383
@@ -27,12 +29,19 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boot_devices=soc/c0c4000.sdhci
+ifeq ($(BUILD_RECOVERY_IMAGE),true)
+BOARD_KERNEL_CMDLINE += androidboot.mode=recovery
+else
 BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1 # FIXME
+endif
 TARGET_KERNEL_CONFIG := vendor/sdm660-perf_defconfig vendor/sdm660-custom.config vendor/debugfs.config
 TARGET_KERNEL_SOURCE := kernel/qualcomm/sdm455
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
+ifeq ($(BUILD_RECOVERY_IMAGE),true)
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x04000000
+endif
 
 SSI_PARTITIONS := product system system_ext
 TREBLE_PARTITIONS := odm vendor
