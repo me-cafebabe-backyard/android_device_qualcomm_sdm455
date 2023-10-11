@@ -5,6 +5,7 @@
 #
 
 AB_OTA_UPDATER := true
+BOARD_HAVE_QCOM_FM := true
 
 # Inherit from sdm660-common
 $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
