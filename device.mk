@@ -56,10 +56,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# Camera
-PRODUCT_PACKAGES += \
-    libpiex_shim
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_led \
