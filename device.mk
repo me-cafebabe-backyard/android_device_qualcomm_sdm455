@@ -52,10 +52,19 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_led \
+    charger_led.recovery
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.device.rc
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

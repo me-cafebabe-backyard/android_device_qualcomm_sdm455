@@ -1,0 +1,2 @@
+# Executables
+/(vendor|system/vendor)/bin/charger_led				u:object_r:charger_led_exec:s0
