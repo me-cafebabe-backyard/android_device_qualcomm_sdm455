@@ -62,6 +62,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.device.rc
 
+# Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # Recovery
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm660-common/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
