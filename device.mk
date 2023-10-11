@@ -60,6 +60,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    fstab.qcom_first_stage_ramdisk \
     init.device.rc
 
 # Health

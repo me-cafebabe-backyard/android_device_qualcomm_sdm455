@@ -17,7 +17,7 @@ AB_OTA_PARTITIONS += \
     system \
     vendor
 
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
@@ -28,6 +28,8 @@ TARGET_SCREEN_DENSITY := 383
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
+BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boot_devices=soc/c0c4000.sdhci
+BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1 # FIXME
 TARGET_KERNEL_CONFIG := vendor/sdm660-perf_defconfig vendor/sdm660-custom.config vendor/debugfs.config
 TARGET_KERNEL_SOURCE := kernel/qualcomm/sdm455
 
