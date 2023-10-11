@@ -1,2 +1,6 @@
 # Executables
 /(vendor|system/vendor)/bin/charger_led				u:object_r:charger_led_exec:s0
+
+# Partitions
+/dev/block/platform/soc/c0c4000\.sdhci/by-name/system_(a|b)	u:object_r:system_block_device:s0
+/dev/block/platform/soc/c0c4000\.sdhci/by-name/vendor_(a|b)	u:object_r:system_block_device:s0
