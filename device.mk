@@ -55,7 +55,7 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     charger_led \
-    charger_led.recovery
+    charger_led_recovery
 
 # Init
 PRODUCT_PACKAGES += \
