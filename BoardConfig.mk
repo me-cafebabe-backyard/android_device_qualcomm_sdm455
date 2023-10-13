@@ -28,7 +28,6 @@ TARGET_SCREEN_DENSITY := 383
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
-BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boot_devices=soc/c0c4000.sdhci
 ifeq ($(BUILD_RECOVERY_IMAGE),true)
 BOARD_KERNEL_CMDLINE += androidboot.mode=recovery
 else
