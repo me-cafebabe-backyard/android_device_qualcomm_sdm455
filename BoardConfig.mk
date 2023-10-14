@@ -30,8 +30,6 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 # Kernel
 ifeq ($(BUILD_RECOVERY_IMAGE),true)
 BOARD_KERNEL_CMDLINE += androidboot.mode=recovery
-else
-BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1 # FIXME
 endif
 TARGET_KERNEL_CONFIG := vendor/sdm660-perf_defconfig vendor/sdm660-custom.config vendor/debugfs.config
 TARGET_KERNEL_SOURCE := kernel/qualcomm/sdm455
