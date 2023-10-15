@@ -14,7 +14,6 @@ $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Dynamic Partitions
-PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
