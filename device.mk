@@ -101,4 +101,4 @@ $(call inherit-product, vendor/qualcomm/sdm455/sdm455-vendor.mk)
 
 # Extra
 EXTRA_DEVICE_BRACKET := low-end
-PRODUCT_EXCLUDE_IH8SN := true
+#PRODUCT_EXCLUDE_IH8SN := true
