@@ -31,6 +31,7 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 write_headers
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
+write_makefiles "${MY_DIR}/proprietary-files-camera.txt" true
 write_makefiles "${MY_DIR}/proprietary-files-stock.txt" true
 
 # Finish
